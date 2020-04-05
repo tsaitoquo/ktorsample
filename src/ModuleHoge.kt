@@ -79,8 +79,8 @@ fun Application.module(testing: Boolean = false) {
         get("/html-freemarker") {
             call.respond(FreeMarkerContent("index.ftl", mapOf("data" to IndexData(listOf(1, 2, 3))), ""))
         }
-        get("/mazi{...}") {
-            call.respondText("dot dot dot")
+        get("/{...}") {
+            call.respondText("hi there")
         }
 
         route("/login") {
