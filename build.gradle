@@ -38,3 +38,8 @@ dependencies {
 
     testImplementation "io.ktor:ktor-server-tests:$ktor_version"
 }
+
+mainClassName = 'com.example.ApplicationKt'
+task stage {
+    dependsOn installDist
+}
